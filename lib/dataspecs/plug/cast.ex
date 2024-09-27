@@ -85,17 +85,20 @@ if Code.ensure_loaded?(Plug) do
 
     @spec cast(Plug.Conn.t(), Plug.opts()) :: Plug.Conn.t()
     defp cast(conn, _opts) do
-      with {:get_typeref, {:ok, type_ref}} <- {:get_typeref, get_typeref(conn)},
-           {:cast, {:ok, value}} <- {:cast, DataSpecs.cast(conn.body_params, type_ref)} do
-        put_in(conn.assigns.dataspec.value, value)
-      else
-        {:get_typeref, :error} ->
-          raise_missing_typeref()
+      case get_typeref(conn) do
+        {:ok, type_ref} ->
+          case DataSpecs.cast(conn.body_params, type_ref) do
+            {:ok, value} ->
+              put_in(conn.assigns.dataspec.value, value)
 
-        {:cast, {:error, reason}} ->
-          conn
-          |> resp(:bad_request, inspect(reason))
-          |> halt()
+            {:error, reason} ->
+              conn
+              |> resp(:bad_request, inspect(reason))
+              |> halt()
+          end
+
+        :error ->
+          raise_missing_typeref()
       end
     end
 
