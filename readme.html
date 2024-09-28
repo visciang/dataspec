@@ -4,22 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.31.1">
+    <meta name="generator" content="ExDoc v0.34.2">
     <meta name="project" content="dataspecs v2.1.0">
 
 
     <title>DataSpecs — dataspecs v2.1.0</title>
-    <link rel="stylesheet" href="dist/html-elixir-FM2CSD74.css" />
+    <link rel="stylesheet" href="dist/html-elixir-F2VRIOKR.css" />
 
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-43PMFBC7.js"></script>
+    <script src="dist/handlebars.templates-K7URE6B4.js"></script>
     <script src="dist/sidebar_items-86E88B75.js"></script>
-
-      <script src="docs_config.js"></script>
-
-    <script async src="dist/html-L4O5OK2K.js"></script>
-
+    <script src="docs_config.js"></script>
+    <script async src="dist/html-YIPIRHGU.js"></script>
 
   </head>
   <body data-type="extras" class="page-extra">
@@ -37,13 +34,11 @@
       } catch (error) { }
     </script>
 
-<div class="main">
+<div class="body-wrapper">
 
 <button id="sidebar-menu" class="sidebar-button sidebar-toggle" aria-label="toggle sidebar" aria-controls="sidebar">
   <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
 </button>
-
-<div class="background-layer"></div>
 
 <nav id="sidebar" class="sidebar">
 
@@ -99,42 +94,42 @@ Pages
 
 <main class="content">
   <output role="status" id="toast"></output>
-  <div class="content-outer">
-    <div id="content" class="content-inner">
-      <div class="top-search">
-        <div class="search-settings">
-          <form class="search-bar" action="search.html">
-            <label class="search-label">
-              <span class="sr-only">Search documentation of dataspecs</span>
-              <input name="q" type="text" class="search-input" placeholder="Search Documentation (press /)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
-            </label>
-            <button type="submit" class="search-button" aria-label="Submit Search">
-              <i class="ri-search-2-line ri-lg" aria-hidden="true" title="Submit search"></i>
-            </button>
-            <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
-              <i class="ri-close-line ri-lg" title="Cancel search"></i>
-            </button>
-          </form>
-          <div class="autocomplete">
-          </div>
-          <button class="icon-settings display-settings">
-            <i class="ri-settings-3-line"></i>
-            <span class="sr-only">Settings</span>
+
+  <div id="content" class="content-inner">
+    <div class="top-search">
+      <div class="search-settings">
+        <form class="search-bar" action="search.html">
+          <label class="search-label">
+            <span class="sr-only">Search documentation of dataspecs</span>
+            <input name="q" type="text" class="search-input" placeholder="Press / to search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+          </label>
+          <button type="submit" class="search-button" aria-label="Submit Search">
+            <i class="ri-search-2-line ri-lg" aria-hidden="true" title="Submit search"></i>
           </button>
+          <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
+            <i class="ri-close-line ri-lg" title="Cancel search"></i>
+          </button>
+        </form>
+        <div class="autocomplete">
         </div>
-
+        <button class="icon-settings display-settings">
+          <i class="ri-settings-3-line"></i>
+          <span class="sr-only">Settings</span>
+        </button>
       </div>
+    </div>
 
-<h1>
+<div id="top-content">
+  <h1>
 
-    <a href="https://github.com/visciang/dataspecs/blob/main/README.md#L1" title="View Source" class="icon-action" rel="help">
-      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-      <span class="sr-only">View Source</span>
-    </a>
+      <a href="https://github.com/visciang/dataspecs/blob/main/README.md#L1" title="View Source" class="icon-action" rel="help">
+        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+        <span class="sr-only">View Source</span>
+      </a>
 
 
-  <span>DataSpecs</span>
-</h1>
+    <span>DataSpecs</span>
+  </h1>
 
 <p><a href="https://github.com/visciang/dataspecs/actions/workflows/ci.yml"><img src="https://github.com/visciang/dataspecs/actions/workflows/ci.yml/badge.svg" alt=".github/workflows/ci.yml"/></a>
 <a href="https://visciang.github.io/dataspecs/readme.html"><img src="https://img.shields.io/badge/docs-latest-green.svg" alt="Docs"/></a>
@@ -148,34 +143,34 @@ richer data types without a native JSON representation (such as dates or sets).<
   </a>
   <span class="text">Usage</span>
 </h2>
-<p>Given the following <code class="inline">Person</code> struct specification</p><pre><code class="makeup elixir" translate="no"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">Person</span><span class="w"> </span><span class="k" data-group-id="6162550462-1">do</span><span class="w">
+<p>Given the following <code class="inline">Person</code> struct specification</p><pre><code class="makeup elixir" translate="no"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">Person</span><span class="w"> </span><span class="k" data-group-id="5246125476-1">do</span><span class="w">
   </span><span class="kn">use</span><span class="w"> </span><span class="nc">DataSpecs</span><span class="w">
 
-  </span><span class="na">@enforce_keys</span><span class="w"> </span><span class="p" data-group-id="6162550462-2">[</span><span class="ss">:name</span><span class="p">,</span><span class="w"> </span><span class="ss">:surname</span><span class="p" data-group-id="6162550462-2">]</span><span class="w">
-  </span><span class="kd">defstruct</span><span class="w"> </span><span class="na">@enforce_keys</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="p" data-group-id="6162550462-3">[</span><span class="ss">:gender</span><span class="p">,</span><span class="w"> </span><span class="ss">:address</span><span class="p">,</span><span class="w"> </span><span class="ss">:birth_date</span><span class="p" data-group-id="6162550462-3">]</span><span class="w">
+  </span><span class="na">@enforce_keys</span><span class="w"> </span><span class="p" data-group-id="5246125476-2">[</span><span class="ss">:name</span><span class="p">,</span><span class="w"> </span><span class="ss">:surname</span><span class="p" data-group-id="5246125476-2">]</span><span class="w">
+  </span><span class="kd">defstruct</span><span class="w"> </span><span class="na">@enforce_keys</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="p" data-group-id="5246125476-3">[</span><span class="ss">:gender</span><span class="p">,</span><span class="w"> </span><span class="ss">:address</span><span class="p">,</span><span class="w"> </span><span class="ss">:birth_date</span><span class="p" data-group-id="5246125476-3">]</span><span class="w">
 
-  </span><span class="na">@type</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">%</span><span class="bp">__MODULE__</span><span class="p" data-group-id="6162550462-4">{</span><span class="w">
-               </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="6162550462-5">(</span><span class="p" data-group-id="6162550462-5">)</span><span class="p">,</span><span class="w">
-               </span><span class="ss">surname</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="6162550462-6">(</span><span class="p" data-group-id="6162550462-6">)</span><span class="p">,</span><span class="w">
-               </span><span class="ss">gender</span><span class="p">:</span><span class="w"> </span><span class="n">option</span><span class="p" data-group-id="6162550462-7">(</span><span class="ss">:male</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="ss">:female</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="ss">:other</span><span class="p" data-group-id="6162550462-7">)</span><span class="p">,</span><span class="w">
-               </span><span class="ss">address</span><span class="p">:</span><span class="w"> </span><span class="n">option</span><span class="p" data-group-id="6162550462-8">(</span><span class="p" data-group-id="6162550462-9">[</span><span class="nc">Address</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="6162550462-10">(</span><span class="p" data-group-id="6162550462-10">)</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="p" data-group-id="6162550462-9">]</span><span class="p" data-group-id="6162550462-8">)</span><span class="p">,</span><span class="w">
-               </span><span class="ss">birth_date</span><span class="p">:</span><span class="w"> </span><span class="n">option</span><span class="p" data-group-id="6162550462-11">(</span><span class="nc">Date</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="6162550462-12">(</span><span class="p" data-group-id="6162550462-12">)</span><span class="p" data-group-id="6162550462-11">)</span><span class="w">
-             </span><span class="p" data-group-id="6162550462-4">}</span><span class="w">
+  </span><span class="na">@type</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">%</span><span class="bp">__MODULE__</span><span class="p" data-group-id="5246125476-4">{</span><span class="w">
+               </span><span class="ss">name</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="5246125476-5">(</span><span class="p" data-group-id="5246125476-5">)</span><span class="p">,</span><span class="w">
+               </span><span class="ss">surname</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="5246125476-6">(</span><span class="p" data-group-id="5246125476-6">)</span><span class="p">,</span><span class="w">
+               </span><span class="ss">gender</span><span class="p">:</span><span class="w"> </span><span class="n">option</span><span class="p" data-group-id="5246125476-7">(</span><span class="ss">:male</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="ss">:female</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="ss">:other</span><span class="p" data-group-id="5246125476-7">)</span><span class="p">,</span><span class="w">
+               </span><span class="ss">address</span><span class="p">:</span><span class="w"> </span><span class="n">option</span><span class="p" data-group-id="5246125476-8">(</span><span class="p" data-group-id="5246125476-9">[</span><span class="nc">Address</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="5246125476-10">(</span><span class="p" data-group-id="5246125476-10">)</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="p" data-group-id="5246125476-9">]</span><span class="p" data-group-id="5246125476-8">)</span><span class="p">,</span><span class="w">
+               </span><span class="ss">birth_date</span><span class="p">:</span><span class="w"> </span><span class="n">option</span><span class="p" data-group-id="5246125476-11">(</span><span class="nc">Date</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="5246125476-12">(</span><span class="p" data-group-id="5246125476-12">)</span><span class="p" data-group-id="5246125476-11">)</span><span class="w">
+             </span><span class="p" data-group-id="5246125476-4">}</span><span class="w">
 
-  </span><span class="na">@type</span><span class="w"> </span><span class="n">option</span><span class="p" data-group-id="6162550462-13">(</span><span class="n">x</span><span class="p" data-group-id="6162550462-13">)</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="no">nil</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w">
-</span><span class="k" data-group-id="6162550462-1">end</span><span class="w">
+  </span><span class="na">@type</span><span class="w"> </span><span class="n">option</span><span class="p" data-group-id="5246125476-13">(</span><span class="n">x</span><span class="p" data-group-id="5246125476-13">)</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="no">nil</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w">
+</span><span class="k" data-group-id="5246125476-1">end</span><span class="w">
 
-</span><span class="kd">defmodule</span><span class="w"> </span><span class="nc">Address</span><span class="w"> </span><span class="k" data-group-id="6162550462-14">do</span><span class="w">
-  </span><span class="na">@enforce_keys</span><span class="w"> </span><span class="p" data-group-id="6162550462-15">[</span><span class="ss">:streetname</span><span class="p">,</span><span class="w"> </span><span class="ss">:streenumber</span><span class="p">,</span><span class="w"> </span><span class="ss">:postcode</span><span class="p">,</span><span class="w"> </span><span class="ss">:town</span><span class="p" data-group-id="6162550462-15">]</span><span class="w">
+</span><span class="kd">defmodule</span><span class="w"> </span><span class="nc">Address</span><span class="w"> </span><span class="k" data-group-id="5246125476-14">do</span><span class="w">
+  </span><span class="na">@enforce_keys</span><span class="w"> </span><span class="p" data-group-id="5246125476-15">[</span><span class="ss">:streetname</span><span class="p">,</span><span class="w"> </span><span class="ss">:streenumber</span><span class="p">,</span><span class="w"> </span><span class="ss">:postcode</span><span class="p">,</span><span class="w"> </span><span class="ss">:town</span><span class="p" data-group-id="5246125476-15">]</span><span class="w">
   </span><span class="kd">defstruct</span><span class="w"> </span><span class="na">@enforce_keys</span><span class="w">
 
-  </span><span class="na">@type</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">%</span><span class="bp">__MODULE__</span><span class="p" data-group-id="6162550462-16">{</span><span class="w">
-               </span><span class="ss">streetname</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="6162550462-17">(</span><span class="p" data-group-id="6162550462-17">)</span><span class="p">,</span><span class="w">
-               </span><span class="ss">streenumber</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="6162550462-18">(</span><span class="p" data-group-id="6162550462-18">)</span><span class="p">,</span><span class="w">
-               </span><span class="ss">postcode</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="6162550462-19">(</span><span class="p" data-group-id="6162550462-19">)</span><span class="p">,</span><span class="w">
-               </span><span class="ss">town</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="6162550462-20">(</span><span class="p" data-group-id="6162550462-20">)</span><span class="w">
-             </span><span class="p" data-group-id="6162550462-16">}</span><span class="w">
-</span><span class="k" data-group-id="6162550462-14">end</span></code></pre><p>we can cast a JSON object encoding an instance of a <code class="inline">Person</code> with:</p><pre><code class="makeup elixir" translate="no"><span class="s">~s/{
+  </span><span class="na">@type</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">%</span><span class="bp">__MODULE__</span><span class="p" data-group-id="5246125476-16">{</span><span class="w">
+               </span><span class="ss">streetname</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="5246125476-17">(</span><span class="p" data-group-id="5246125476-17">)</span><span class="p">,</span><span class="w">
+               </span><span class="ss">streenumber</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="5246125476-18">(</span><span class="p" data-group-id="5246125476-18">)</span><span class="p">,</span><span class="w">
+               </span><span class="ss">postcode</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="5246125476-19">(</span><span class="p" data-group-id="5246125476-19">)</span><span class="p">,</span><span class="w">
+               </span><span class="ss">town</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="5246125476-20">(</span><span class="p" data-group-id="5246125476-20">)</span><span class="w">
+             </span><span class="p" data-group-id="5246125476-16">}</span><span class="w">
+</span><span class="k" data-group-id="5246125476-14">end</span></code></pre><p>we can cast a JSON object encoding an instance of a <code class="inline">Person</code> with:</p><pre><code class="makeup elixir" translate="no"><span class="s">~s/{
   &quot;name&quot;: &quot;Joe&quot;,
   &quot;surname&quot;: &quot;Smith&quot;,
   &quot;gender&quot;: &quot;male&quot;,
@@ -187,8 +182,8 @@ richer data types without a native JSON representation (such as dates or sets).<
     &quot;town&quot;: &quot;Hedge End, Southampton&quot;
   }]
 }/</span><span class="w">
-</span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Jason</span><span class="o">.</span><span class="n">decode!</span><span class="p" data-group-id="7037678079-1">(</span><span class="p" data-group-id="7037678079-1">)</span><span class="w">
-</span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Person</span><span class="o">.</span><span class="n">cast</span><span class="p" data-group-id="7037678079-2">(</span><span class="p" data-group-id="7037678079-2">)</span><span class="w">
+</span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Jason</span><span class="o">.</span><span class="n">decode!</span><span class="p" data-group-id="7792315334-1">(</span><span class="p" data-group-id="7792315334-1">)</span><span class="w">
+</span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Person</span><span class="o">.</span><span class="n">cast</span><span class="p" data-group-id="7792315334-2">(</span><span class="p" data-group-id="7792315334-2">)</span><span class="w">
 
 </span><span class="c1"># =&gt; %Person{</span><span class="w">
 </span><span class="c1">#      address: [</span><span class="w">
@@ -211,33 +206,33 @@ without any additional transformation. </p><p>However, not all Elixir types have
   </a>
   <span class="text">Installation</span>
 </h2>
-<pre><code class="makeup elixir" translate="no"><span class="kd">def</span><span class="w"> </span><span class="nf">deps</span><span class="w"> </span><span class="k" data-group-id="2637352406-1">do</span><span class="w">
-  </span><span class="p" data-group-id="2637352406-2">[</span><span class="w">
-    </span><span class="p" data-group-id="2637352406-3">{</span><span class="ss">:dataspecs</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;~&gt; xxx&quot;</span><span class="p" data-group-id="2637352406-3">}</span><span class="w">
-  </span><span class="p" data-group-id="2637352406-2">]</span><span class="w">
-</span><span class="k" data-group-id="2637352406-1">end</span></code></pre><p>Typespecs should be included in the compiled ebin.</p><p>Set the <code class="inline">:strip_beams</code> option to <code class="inline">false</code> when compiling your project with mix
-release or mix escript.</p><pre><code class="makeup elixir" translate="no"><span class="kd">def</span><span class="w"> </span><span class="nf">project</span><span class="w"> </span><span class="k" data-group-id="9678604577-1">do</span><span class="w">
-  </span><span class="p" data-group-id="9678604577-2">[</span><span class="w">
+<pre><code class="makeup elixir" translate="no"><span class="kd">def</span><span class="w"> </span><span class="nf">deps</span><span class="w"> </span><span class="k" data-group-id="3413230910-1">do</span><span class="w">
+  </span><span class="p" data-group-id="3413230910-2">[</span><span class="w">
+    </span><span class="p" data-group-id="3413230910-3">{</span><span class="ss">:dataspecs</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;~&gt; xxx&quot;</span><span class="p" data-group-id="3413230910-3">}</span><span class="w">
+  </span><span class="p" data-group-id="3413230910-2">]</span><span class="w">
+</span><span class="k" data-group-id="3413230910-1">end</span></code></pre><p>Typespecs should be included in the compiled ebin.</p><p>Set the <code class="inline">:strip_beams</code> option to <code class="inline">false</code> when compiling your project with mix
+release or mix escript.</p><pre><code class="makeup elixir" translate="no"><span class="kd">def</span><span class="w"> </span><span class="nf">project</span><span class="w"> </span><span class="k" data-group-id="3826930078-1">do</span><span class="w">
+  </span><span class="p" data-group-id="3826930078-2">[</span><span class="w">
     </span><span class="ss">app</span><span class="p">:</span><span class="w"> </span><span class="ss">:my_app</span><span class="p">,</span><span class="w">
-    </span><span class="ss">deps</span><span class="p">:</span><span class="w"> </span><span class="n">deps</span><span class="p" data-group-id="9678604577-3">(</span><span class="p" data-group-id="9678604577-3">)</span><span class="p">,</span><span class="w">
-    </span><span class="ss">releases</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="9678604577-4">[</span><span class="w">
-      </span><span class="ss">my_app</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="9678604577-5">[</span><span class="ss">strip_beams</span><span class="p">:</span><span class="w"> </span><span class="no">false</span><span class="p" data-group-id="9678604577-5">]</span><span class="w">
-    </span><span class="p" data-group-id="9678604577-4">]</span><span class="p">,</span><span class="w">
+    </span><span class="ss">deps</span><span class="p">:</span><span class="w"> </span><span class="n">deps</span><span class="p" data-group-id="3826930078-3">(</span><span class="p" data-group-id="3826930078-3">)</span><span class="p">,</span><span class="w">
+    </span><span class="ss">releases</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="3826930078-4">[</span><span class="w">
+      </span><span class="ss">my_app</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="3826930078-5">[</span><span class="ss">strip_beams</span><span class="p">:</span><span class="w"> </span><span class="no">false</span><span class="p" data-group-id="3826930078-5">]</span><span class="w">
+    </span><span class="p" data-group-id="3826930078-4">]</span><span class="p">,</span><span class="w">
     </span><span class="n">...</span><span class="w">
-  </span><span class="p" data-group-id="9678604577-2">]</span><span class="w">
-</span><span class="k" data-group-id="9678604577-1">end</span><span class="w">
+  </span><span class="p" data-group-id="3826930078-2">]</span><span class="w">
+</span><span class="k" data-group-id="3826930078-1">end</span><span class="w">
 
-</span><span class="kd">def</span><span class="w"> </span><span class="nf">project</span><span class="w"> </span><span class="k" data-group-id="9678604577-6">do</span><span class="w">
-  </span><span class="p" data-group-id="9678604577-7">[</span><span class="w">
+</span><span class="kd">def</span><span class="w"> </span><span class="nf">project</span><span class="w"> </span><span class="k" data-group-id="3826930078-6">do</span><span class="w">
+  </span><span class="p" data-group-id="3826930078-7">[</span><span class="w">
     </span><span class="ss">app</span><span class="p">:</span><span class="w"> </span><span class="ss">:my_script</span><span class="p">,</span><span class="w">
-    </span><span class="ss">deps</span><span class="p">:</span><span class="w"> </span><span class="n">deps</span><span class="p" data-group-id="9678604577-8">(</span><span class="p" data-group-id="9678604577-8">)</span><span class="p">,</span><span class="w">
-    </span><span class="ss">escript</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="9678604577-9">[</span><span class="w">
+    </span><span class="ss">deps</span><span class="p">:</span><span class="w"> </span><span class="n">deps</span><span class="p" data-group-id="3826930078-8">(</span><span class="p" data-group-id="3826930078-8">)</span><span class="p">,</span><span class="w">
+    </span><span class="ss">escript</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="3826930078-9">[</span><span class="w">
       </span><span class="ss">strip_beams</span><span class="p">:</span><span class="w"> </span><span class="no">false</span><span class="p">,</span><span class="w">
       </span><span class="n">...</span><span class="w">
-    </span><span class="p" data-group-id="9678604577-9">]</span><span class="p">,</span><span class="w">
+    </span><span class="p" data-group-id="3826930078-9">]</span><span class="p">,</span><span class="w">
     </span><span class="n">...</span><span class="w">
-  </span><span class="p" data-group-id="9678604577-7">]</span><span class="w">
-</span><span class="k" data-group-id="9678604577-6">end</span></code></pre><h2 id="type-cast" class="section-heading">
+  </span><span class="p" data-group-id="3826930078-7">]</span><span class="w">
+</span><span class="k" data-group-id="3826930078-6">end</span></code></pre><h2 id="type-cast" class="section-heading">
   <a href="#type-cast" class="hover-link">
     <i class="ri-link-m" aria-hidden="true"></i>
   </a>
@@ -255,59 +250,59 @@ release or mix escript.</p><pre><code class="makeup elixir" translate="no"><span
   </a>
   <span class="text">Custom</span>
 </h3>
-<p>You can pass custom type casts along as an optional argument to the <a href="DataSpecs.html#cast/4"><code class="inline">DataSpecs.cast/4</code></a> function.</p><p>The type of the custom cast function is</p><pre><code class="makeup elixir" translate="no"><span class="na">@type</span><span class="w"> </span><span class="n">custom_type_cast_fun</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p" data-group-id="9163714253-1">(</span><span class="n">value</span><span class="p" data-group-id="9163714253-2">(</span><span class="p" data-group-id="9163714253-2">)</span><span class="p">,</span><span class="w"> </span><span class="n">custom_type_casts</span><span class="p" data-group-id="9163714253-3">(</span><span class="p" data-group-id="9163714253-3">)</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="9163714253-4">[</span><span class="n">type_cast_fun</span><span class="p" data-group-id="9163714253-5">(</span><span class="p" data-group-id="9163714253-5">)</span><span class="p" data-group-id="9163714253-4">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">value</span><span class="p" data-group-id="9163714253-6">(</span><span class="p" data-group-id="9163714253-6">)</span><span class="p" data-group-id="9163714253-1">)</span></code></pre><p>for example a custom <a href="https://hexdocs.pm/elixir/MapSet.html#t:t/1"><code class="inline">MapSet.t/1</code></a> cast could be implement as:</p><pre><code class="makeup elixir" translate="no"><span class="kd">def</span><span class="w"> </span><span class="nf">custom_mapset_cast</span><span class="p" data-group-id="3803631308-1">(</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">custom_type_casts</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="3803631308-2">[</span><span class="n">type_cast_fun</span><span class="p" data-group-id="3803631308-2">]</span><span class="p" data-group-id="3803631308-1">)</span><span class="w"> </span><span class="k" data-group-id="3803631308-3">do</span><span class="w">
-  </span><span class="k">case</span><span class="w"> </span><span class="nc">Enumerable</span><span class="o">.</span><span class="n">impl_for</span><span class="p" data-group-id="3803631308-4">(</span><span class="n">value</span><span class="p" data-group-id="3803631308-4">)</span><span class="w"> </span><span class="k" data-group-id="3803631308-5">do</span><span class="w">
+<p>You can pass custom type casts along as an optional argument to the <a href="DataSpecs.html#cast/4"><code class="inline">DataSpecs.cast/4</code></a> function.</p><p>The type of the custom cast function is</p><pre><code class="makeup elixir" translate="no"><span class="na">@type</span><span class="w"> </span><span class="n">custom_type_cast_fun</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p" data-group-id="5425639832-1">(</span><span class="n">value</span><span class="p" data-group-id="5425639832-2">(</span><span class="p" data-group-id="5425639832-2">)</span><span class="p">,</span><span class="w"> </span><span class="n">custom_type_casts</span><span class="p" data-group-id="5425639832-3">(</span><span class="p" data-group-id="5425639832-3">)</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="5425639832-4">[</span><span class="n">type_cast_fun</span><span class="p" data-group-id="5425639832-5">(</span><span class="p" data-group-id="5425639832-5">)</span><span class="p" data-group-id="5425639832-4">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">value</span><span class="p" data-group-id="5425639832-6">(</span><span class="p" data-group-id="5425639832-6">)</span><span class="p" data-group-id="5425639832-1">)</span></code></pre><p>for example a custom <a href="https://hexdocs.pm/elixir/MapSet.html#t:t/1"><code class="inline">MapSet.t/1</code></a> cast could be implement as:</p><pre><code class="makeup elixir" translate="no"><span class="kd">def</span><span class="w"> </span><span class="nf">custom_mapset_cast</span><span class="p" data-group-id="6603652466-1">(</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">custom_type_casts</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="6603652466-2">[</span><span class="n">type_cast_fun</span><span class="p" data-group-id="6603652466-2">]</span><span class="p" data-group-id="6603652466-1">)</span><span class="w"> </span><span class="k" data-group-id="6603652466-3">do</span><span class="w">
+  </span><span class="k">case</span><span class="w"> </span><span class="nc">Enumerable</span><span class="o">.</span><span class="n">impl_for</span><span class="p" data-group-id="6603652466-4">(</span><span class="n">value</span><span class="p" data-group-id="6603652466-4">)</span><span class="w"> </span><span class="k" data-group-id="6603652466-5">do</span><span class="w">
     </span><span class="no">nil</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
-      </span><span class="p" data-group-id="3803631308-6">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="3803631308-7">[</span><span class="s">&quot;can&#39;t convert </span><span class="si" data-group-id="3803631308-8">#{</span><span class="n">inspect</span><span class="p" data-group-id="3803631308-9">(</span><span class="n">value</span><span class="p" data-group-id="3803631308-9">)</span><span class="si" data-group-id="3803631308-8">}</span><span class="s"> to a MapSet.t/1, value not enumerable&quot;</span><span class="p" data-group-id="3803631308-7">]</span><span class="p" data-group-id="3803631308-6">}</span><span class="w">
+      </span><span class="p" data-group-id="6603652466-6">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="6603652466-7">[</span><span class="s">&quot;can&#39;t convert </span><span class="si" data-group-id="6603652466-8">#{</span><span class="n">inspect</span><span class="p" data-group-id="6603652466-9">(</span><span class="n">value</span><span class="p" data-group-id="6603652466-9">)</span><span class="si" data-group-id="6603652466-8">}</span><span class="s"> to a MapSet.t/1, value not enumerable&quot;</span><span class="p" data-group-id="6603652466-7">]</span><span class="p" data-group-id="6603652466-6">}</span><span class="w">
 
     </span><span class="bp">_</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
       </span><span class="n">value</span><span class="w">
-      </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">to_list</span><span class="p" data-group-id="3803631308-10">(</span><span class="p" data-group-id="3803631308-10">)</span><span class="w">
-      </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">DataSpecs.Cast.Builtin</span><span class="o">.</span><span class="n">list</span><span class="p" data-group-id="3803631308-11">(</span><span class="n">custom_type_casts</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="3803631308-12">[</span><span class="n">type_cast_fun</span><span class="p" data-group-id="3803631308-12">]</span><span class="p" data-group-id="3803631308-11">)</span><span class="w">
-      </span><span class="o">|&gt;</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="k" data-group-id="3803631308-13">do</span><span class="w">
-        </span><span class="p" data-group-id="3803631308-14">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">casted_value</span><span class="p" data-group-id="3803631308-14">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
-          </span><span class="p" data-group-id="3803631308-15">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="nc">MapSet</span><span class="o">.</span><span class="n">new</span><span class="p" data-group-id="3803631308-16">(</span><span class="n">casted_value</span><span class="p" data-group-id="3803631308-16">)</span><span class="p" data-group-id="3803631308-15">}</span><span class="w">
+      </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">to_list</span><span class="p" data-group-id="6603652466-10">(</span><span class="p" data-group-id="6603652466-10">)</span><span class="w">
+      </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">DataSpecs.Cast.Builtin</span><span class="o">.</span><span class="n">list</span><span class="p" data-group-id="6603652466-11">(</span><span class="n">custom_type_casts</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="6603652466-12">[</span><span class="n">type_cast_fun</span><span class="p" data-group-id="6603652466-12">]</span><span class="p" data-group-id="6603652466-11">)</span><span class="w">
+      </span><span class="o">|&gt;</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="k" data-group-id="6603652466-13">do</span><span class="w">
+        </span><span class="p" data-group-id="6603652466-14">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">casted_value</span><span class="p" data-group-id="6603652466-14">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+          </span><span class="p" data-group-id="6603652466-15">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="nc">MapSet</span><span class="o">.</span><span class="n">new</span><span class="p" data-group-id="6603652466-16">(</span><span class="n">casted_value</span><span class="p" data-group-id="6603652466-16">)</span><span class="p" data-group-id="6603652466-15">}</span><span class="w">
 
-        </span><span class="p" data-group-id="3803631308-17">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="n">errors</span><span class="p" data-group-id="3803631308-17">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
-          </span><span class="p" data-group-id="3803631308-18">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="3803631308-19">[</span><span class="s">&quot;can&#39;t convert </span><span class="si" data-group-id="3803631308-20">#{</span><span class="n">inspect</span><span class="p" data-group-id="3803631308-21">(</span><span class="n">value</span><span class="p" data-group-id="3803631308-21">)</span><span class="si" data-group-id="3803631308-20">}</span><span class="s"> to a MapSet.t/1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">errors</span><span class="p" data-group-id="3803631308-19">]</span><span class="p" data-group-id="3803631308-18">}</span><span class="w">
-      </span><span class="k" data-group-id="3803631308-13">end</span><span class="w">
-  </span><span class="k" data-group-id="3803631308-5">end</span><span class="w">
-</span><span class="k" data-group-id="3803631308-3">end</span></code></pre><p>The custom cast take the input value, check it's enumerable and then builds a <a href="https://hexdocs.pm/elixir/MapSet.html"><code class="inline">MapSet</code></a>
+        </span><span class="p" data-group-id="6603652466-17">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="n">errors</span><span class="p" data-group-id="6603652466-17">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+          </span><span class="p" data-group-id="6603652466-18">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="6603652466-19">[</span><span class="s">&quot;can&#39;t convert </span><span class="si" data-group-id="6603652466-20">#{</span><span class="n">inspect</span><span class="p" data-group-id="6603652466-21">(</span><span class="n">value</span><span class="p" data-group-id="6603652466-21">)</span><span class="si" data-group-id="6603652466-20">}</span><span class="s"> to a MapSet.t/1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">errors</span><span class="p" data-group-id="6603652466-19">]</span><span class="p" data-group-id="6603652466-18">}</span><span class="w">
+      </span><span class="k" data-group-id="6603652466-13">end</span><span class="w">
+  </span><span class="k" data-group-id="6603652466-5">end</span><span class="w">
+</span><span class="k" data-group-id="6603652466-3">end</span></code></pre><p>The custom cast take the input value, check it's enumerable and then builds a <a href="https://hexdocs.pm/elixir/MapSet.html"><code class="inline">MapSet</code></a>
 over the items of the input value. It takes as argument a list of <a href="DataSpecs.Types.html#t:type_cast_fun/0"><code class="inline">DataSpecs.Types.type_cast_fun/0</code></a> associated
-with the type parameters.</p><p>For example, let's say we have:</p><pre><code class="makeup elixir" translate="no"><span class="na">@type</span><span class="w"> </span><span class="n">my_set_of_integer</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="nc">MapSet</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="3578875875-1">(</span><span class="n">integer</span><span class="p" data-group-id="3578875875-2">(</span><span class="p" data-group-id="3578875875-2">)</span><span class="p" data-group-id="3578875875-1">)</span></code></pre><p>and an input value:</p><pre><code class="makeup elixir" translate="no"><span class="mi">1</span><span class="o">..</span><span class="mi">10</span></code></pre><p>then the custom type cast function will be called with</p><pre><code class="makeup elixir" translate="no"><span class="n">custom_mapset_cast</span><span class="p" data-group-id="6461633520-1">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">custom_type_casts</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="6461633520-2">[</span><span class="o">&amp;</span><span class="nc">DataSpecs.Cast.Builtin</span><span class="o">.</span><span class="n">integer</span><span class="o">/</span><span class="mi">3</span><span class="p" data-group-id="6461633520-2">]</span><span class="p" data-group-id="6461633520-1">)</span></code></pre><h2 id="validators" class="section-heading">
+with the type parameters.</p><p>For example, let's say we have:</p><pre><code class="makeup elixir" translate="no"><span class="na">@type</span><span class="w"> </span><span class="n">my_set_of_integer</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="nc">MapSet</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="8513891262-1">(</span><span class="n">integer</span><span class="p" data-group-id="8513891262-2">(</span><span class="p" data-group-id="8513891262-2">)</span><span class="p" data-group-id="8513891262-1">)</span></code></pre><p>and an input value:</p><pre><code class="makeup elixir" translate="no"><span class="mi">1</span><span class="o">..</span><span class="mi">10</span></code></pre><p>then the custom type cast function will be called with</p><pre><code class="makeup elixir" translate="no"><span class="n">custom_mapset_cast</span><span class="p" data-group-id="0478270105-1">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">custom_type_casts</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="0478270105-2">[</span><span class="o">&amp;</span><span class="nc">DataSpecs.Cast.Builtin</span><span class="o">.</span><span class="n">integer</span><span class="o">/</span><span class="mi">3</span><span class="p" data-group-id="0478270105-2">]</span><span class="p" data-group-id="0478270105-1">)</span></code></pre><h2 id="validators" class="section-heading">
   <a href="#validators" class="hover-link">
     <i class="ri-link-m" aria-hidden="true"></i>
   </a>
   <span class="text">Validators</span>
 </h2>
-<p>Custom validation rules can be defined with a custom type cast.</p><p>For example let's say than we want to validate a field of type string to be in upcase form:</p><pre><code class="makeup elixir" translate="no"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">AStruct</span><span class="w"> </span><span class="k" data-group-id="8817808601-1">do</span><span class="w">
+<p>Custom validation rules can be defined with a custom type cast.</p><p>For example let's say than we want to validate a field of type string to be in upcase form:</p><pre><code class="makeup elixir" translate="no"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">AStruct</span><span class="w"> </span><span class="k" data-group-id="4175917589-1">do</span><span class="w">
   </span><span class="kn">use</span><span class="w"> </span><span class="nc">DataSpecs</span><span class="w">
 
-  </span><span class="na">@enforce_keys</span><span class="w"> </span><span class="p" data-group-id="8817808601-2">[</span><span class="ss">:field</span><span class="p" data-group-id="8817808601-2">]</span><span class="w">
+  </span><span class="na">@enforce_keys</span><span class="w"> </span><span class="p" data-group-id="4175917589-2">[</span><span class="ss">:field</span><span class="p" data-group-id="4175917589-2">]</span><span class="w">
   </span><span class="kd">defstruct</span><span class="w"> </span><span class="na">@enforce_keys</span><span class="w">
 
-  </span><span class="na">@type</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">%</span><span class="bp">__MODULE__</span><span class="p" data-group-id="8817808601-3">{</span><span class="w">
-               </span><span class="ss">field</span><span class="p">:</span><span class="w"> </span><span class="n">upcase_string</span><span class="p" data-group-id="8817808601-4">(</span><span class="p" data-group-id="8817808601-4">)</span><span class="w">
-             </span><span class="p" data-group-id="8817808601-3">}</span><span class="w">
+  </span><span class="na">@type</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">%</span><span class="bp">__MODULE__</span><span class="p" data-group-id="4175917589-3">{</span><span class="w">
+               </span><span class="ss">field</span><span class="p">:</span><span class="w"> </span><span class="n">upcase_string</span><span class="p" data-group-id="4175917589-4">(</span><span class="p" data-group-id="4175917589-4">)</span><span class="w">
+             </span><span class="p" data-group-id="4175917589-3">}</span><span class="w">
 
-  </span><span class="na">@type</span><span class="w"> </span><span class="n">upcase_string</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="8817808601-5">(</span><span class="p" data-group-id="8817808601-5">)</span><span class="w">
+  </span><span class="na">@type</span><span class="w"> </span><span class="n">upcase_string</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">t</span><span class="p" data-group-id="4175917589-5">(</span><span class="p" data-group-id="4175917589-5">)</span><span class="w">
 
-  </span><span class="kd">def</span><span class="w"> </span><span class="nf">custom_field_cast</span><span class="p" data-group-id="8817808601-6">(</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">custom_type_casts</span><span class="p">,</span><span class="w"> </span><span class="n">type_params_casts</span><span class="p" data-group-id="8817808601-6">)</span><span class="w"> </span><span class="k" data-group-id="8817808601-7">do</span><span class="w">
-    </span><span class="k">with</span><span class="w"> </span><span class="p" data-group-id="8817808601-8">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p" data-group-id="8817808601-8">}</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nc">DataSpecs.Cast.Builtin</span><span class="o">.</span><span class="n">binary</span><span class="p" data-group-id="8817808601-9">(</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">custom_type_casts</span><span class="p">,</span><span class="w"> </span><span class="n">type_params_casts</span><span class="p" data-group-id="8817808601-9">)</span><span class="w">
-         </span><span class="o">^</span><span class="n">name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">upcase</span><span class="p" data-group-id="8817808601-10">(</span><span class="n">name</span><span class="p" data-group-id="8817808601-10">)</span><span class="w"> </span><span class="k" data-group-id="8817808601-11">do</span><span class="w">
-      </span><span class="p" data-group-id="8817808601-12">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="8817808601-12">}</span><span class="w">
-    </span><span class="k" data-group-id="8817808601-11">else</span><span class="w">
-      </span><span class="p" data-group-id="8817808601-13">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="n">errors</span><span class="p" data-group-id="8817808601-13">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
-        </span><span class="p" data-group-id="8817808601-14">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="8817808601-15">[</span><span class="s">&quot;</span><span class="si" data-group-id="8817808601-16">#{</span><span class="n">inspect</span><span class="p" data-group-id="8817808601-17">(</span><span class="n">value</span><span class="p" data-group-id="8817808601-17">)</span><span class="si" data-group-id="8817808601-16">}</span><span class="s"> is not an upcase string&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">errors</span><span class="p" data-group-id="8817808601-15">]</span><span class="p" data-group-id="8817808601-14">}</span><span class="w">
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">custom_field_cast</span><span class="p" data-group-id="4175917589-6">(</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">custom_type_casts</span><span class="p">,</span><span class="w"> </span><span class="n">type_params_casts</span><span class="p" data-group-id="4175917589-6">)</span><span class="w"> </span><span class="k" data-group-id="4175917589-7">do</span><span class="w">
+    </span><span class="k">with</span><span class="w"> </span><span class="p" data-group-id="4175917589-8">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p" data-group-id="4175917589-8">}</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nc">DataSpecs.Cast.Builtin</span><span class="o">.</span><span class="n">binary</span><span class="p" data-group-id="4175917589-9">(</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">custom_type_casts</span><span class="p">,</span><span class="w"> </span><span class="n">type_params_casts</span><span class="p" data-group-id="4175917589-9">)</span><span class="w">
+         </span><span class="o">^</span><span class="n">name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">upcase</span><span class="p" data-group-id="4175917589-10">(</span><span class="n">name</span><span class="p" data-group-id="4175917589-10">)</span><span class="w"> </span><span class="k" data-group-id="4175917589-11">do</span><span class="w">
+      </span><span class="p" data-group-id="4175917589-12">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p" data-group-id="4175917589-12">}</span><span class="w">
+    </span><span class="k" data-group-id="4175917589-11">else</span><span class="w">
+      </span><span class="p" data-group-id="4175917589-13">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="n">errors</span><span class="p" data-group-id="4175917589-13">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+        </span><span class="p" data-group-id="4175917589-14">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="4175917589-15">[</span><span class="s">&quot;</span><span class="si" data-group-id="4175917589-16">#{</span><span class="n">inspect</span><span class="p" data-group-id="4175917589-17">(</span><span class="n">value</span><span class="p" data-group-id="4175917589-17">)</span><span class="si" data-group-id="4175917589-16">}</span><span class="s"> is not an upcase string&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">errors</span><span class="p" data-group-id="4175917589-15">]</span><span class="p" data-group-id="4175917589-14">}</span><span class="w">
 
       </span><span class="no">false</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
-        </span><span class="p" data-group-id="8817808601-18">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="8817808601-19">[</span><span class="s">&quot;</span><span class="si" data-group-id="8817808601-20">#{</span><span class="n">inspect</span><span class="p" data-group-id="8817808601-21">(</span><span class="n">value</span><span class="p" data-group-id="8817808601-21">)</span><span class="si" data-group-id="8817808601-20">}</span><span class="s"> is not an upcase string&quot;</span><span class="p" data-group-id="8817808601-19">]</span><span class="p" data-group-id="8817808601-18">}</span><span class="w">
-    </span><span class="k" data-group-id="8817808601-11">end</span><span class="w">
-  </span><span class="k" data-group-id="8817808601-7">end</span><span class="w">
-</span><span class="k" data-group-id="8817808601-1">end</span><span class="w">
+        </span><span class="p" data-group-id="4175917589-18">{</span><span class="ss">:error</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="4175917589-19">[</span><span class="s">&quot;</span><span class="si" data-group-id="4175917589-20">#{</span><span class="n">inspect</span><span class="p" data-group-id="4175917589-21">(</span><span class="n">value</span><span class="p" data-group-id="4175917589-21">)</span><span class="si" data-group-id="4175917589-20">}</span><span class="s"> is not an upcase string&quot;</span><span class="p" data-group-id="4175917589-19">]</span><span class="p" data-group-id="4175917589-18">}</span><span class="w">
+    </span><span class="k" data-group-id="4175917589-11">end</span><span class="w">
+  </span><span class="k" data-group-id="4175917589-7">end</span><span class="w">
+</span><span class="k" data-group-id="4175917589-1">end</span><span class="w">
 
-</span><span class="n">custom_type_casts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="8817808601-22">%{</span><span class="p" data-group-id="8817808601-23">{</span><span class="nc">AStruct</span><span class="p">,</span><span class="w"> </span><span class="ss">:upcase_string</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="8817808601-23">}</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="nc">AStruct</span><span class="o">.</span><span class="n">custom_field_cast</span><span class="o">/</span><span class="mi">3</span><span class="p" data-group-id="8817808601-22">}</span><span class="w">
-</span><span class="nc">AStruct</span><span class="o">.</span><span class="n">cast</span><span class="p" data-group-id="8817808601-24">(</span><span class="p" data-group-id="8817808601-25">%{</span><span class="ss">field</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;AAA&quot;</span><span class="p" data-group-id="8817808601-25">}</span><span class="p">,</span><span class="w"> </span><span class="n">custom_type_casts</span><span class="p" data-group-id="8817808601-24">)</span><span class="w">
+</span><span class="n">custom_type_casts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="4175917589-22">%{</span><span class="p" data-group-id="4175917589-23">{</span><span class="nc">AStruct</span><span class="p">,</span><span class="w"> </span><span class="ss">:upcase_string</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="4175917589-23">}</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="nc">AStruct</span><span class="o">.</span><span class="n">custom_field_cast</span><span class="o">/</span><span class="mi">3</span><span class="p" data-group-id="4175917589-22">}</span><span class="w">
+</span><span class="nc">AStruct</span><span class="o">.</span><span class="n">cast</span><span class="p" data-group-id="4175917589-24">(</span><span class="p" data-group-id="4175917589-25">%{</span><span class="ss">field</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;AAA&quot;</span><span class="p" data-group-id="4175917589-25">}</span><span class="p">,</span><span class="w"> </span><span class="n">custom_type_casts</span><span class="p" data-group-id="4175917589-24">)</span><span class="w">
 </span><span class="c1"># =&gt; %AStruct{field: &quot;AAA&quot;}</span></code></pre><h2 id="type-coercion" class="section-heading">
   <a href="#type-coercion" class="hover-link">
     <i class="ri-link-m" aria-hidden="true"></i>
@@ -329,44 +324,44 @@ with the type parameters.</p><p>For example, let's say we have:</p><pre><code cl
   </a>
   <span class="text">tuple()</span>
 </h3>
-<p><code class="inline">list() -&gt; tuple()</code></p><pre><code class="makeup elixir" translate="no"><span class="na">@type</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p" data-group-id="0120480480-1">{</span><span class="n">atom</span><span class="p" data-group-id="0120480480-2">(</span><span class="p" data-group-id="0120480480-2">)</span><span class="p">,</span><span class="w"> </span><span class="n">integer</span><span class="p" data-group-id="0120480480-3">(</span><span class="p" data-group-id="0120480480-3">)</span><span class="p" data-group-id="0120480480-1">}</span><span class="w">
+<p><code class="inline">list() -&gt; tuple()</code></p><pre><code class="makeup elixir" translate="no"><span class="na">@type</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p" data-group-id="6040059613-1">{</span><span class="n">atom</span><span class="p" data-group-id="6040059613-2">(</span><span class="p" data-group-id="6040059613-2">)</span><span class="p">,</span><span class="w"> </span><span class="n">integer</span><span class="p" data-group-id="6040059613-3">(</span><span class="p" data-group-id="6040059613-3">)</span><span class="p" data-group-id="6040059613-1">}</span><span class="w">
 
 </span><span class="c1"># ---</span><span class="w">
-</span><span class="p" data-group-id="0120480480-4">[</span><span class="ss">:a</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="0120480480-4">]</span><span class="w">
+</span><span class="p" data-group-id="6040059613-4">[</span><span class="ss">:a</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="6040059613-4">]</span><span class="w">
 </span><span class="c1"># to</span><span class="w">
-</span><span class="p" data-group-id="0120480480-5">{</span><span class="ss">:a</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="0120480480-5">}</span></code></pre><h3 id="struct" class="section-heading">
+</span><span class="p" data-group-id="6040059613-5">{</span><span class="ss">:a</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="6040059613-5">}</span></code></pre><h3 id="struct" class="section-heading">
   <a href="#struct" class="hover-link">
     <i class="ri-link-m" aria-hidden="true"></i>
   </a>
   <span class="text">struct()</span>
 </h3>
-<p><code class="inline">map() -&gt; struct()</code></p><p>Example:</p><pre><code class="makeup elixir" translate="no"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">AStruct</span><span class="w"> </span><span class="k" data-group-id="1033112095-1">do</span><span class="w">
-  </span><span class="kd">defstruct</span><span class="w"> </span><span class="p" data-group-id="1033112095-2">[</span><span class="ss">:a</span><span class="p">,</span><span class="w"> </span><span class="ss">:b</span><span class="p" data-group-id="1033112095-2">]</span><span class="w">
+<p><code class="inline">map() -&gt; struct()</code></p><p>Example:</p><pre><code class="makeup elixir" translate="no"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">AStruct</span><span class="w"> </span><span class="k" data-group-id="5582740937-1">do</span><span class="w">
+  </span><span class="kd">defstruct</span><span class="w"> </span><span class="p" data-group-id="5582740937-2">[</span><span class="ss">:a</span><span class="p">,</span><span class="w"> </span><span class="ss">:b</span><span class="p" data-group-id="5582740937-2">]</span><span class="w">
 
-  </span><span class="na">@type</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">%</span><span class="bp">__MODULE__</span><span class="p" data-group-id="1033112095-3">{</span><span class="w">
-               </span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="no">nil</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">binary</span><span class="p" data-group-id="1033112095-4">(</span><span class="p" data-group-id="1033112095-4">)</span><span class="p">,</span><span class="w">
-               </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="no">nil</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">binary</span><span class="p" data-group-id="1033112095-5">(</span><span class="p" data-group-id="1033112095-5">)</span><span class="w">
-             </span><span class="p" data-group-id="1033112095-3">}</span><span class="w">
+  </span><span class="na">@type</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p">%</span><span class="bp">__MODULE__</span><span class="p" data-group-id="5582740937-3">{</span><span class="w">
+               </span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="no">nil</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">binary</span><span class="p" data-group-id="5582740937-4">(</span><span class="p" data-group-id="5582740937-4">)</span><span class="p">,</span><span class="w">
+               </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="no">nil</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">binary</span><span class="p" data-group-id="5582740937-5">(</span><span class="p" data-group-id="5582740937-5">)</span><span class="w">
+             </span><span class="p" data-group-id="5582740937-3">}</span><span class="w">
 
 </span><span class="c1"># ---</span><span class="w">
-</span><span class="p" data-group-id="1033112095-6">%{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p" data-group-id="1033112095-6">}</span><span class="w">
+</span><span class="p" data-group-id="5582740937-6">%{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p" data-group-id="5582740937-6">}</span><span class="w">
 </span><span class="c1"># to</span><span class="w">
-</span><span class="p" data-group-id="1033112095-7">%</span><span class="nc" data-group-id="1033112095-7">AStruct</span><span class="p" data-group-id="1033112095-7">{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p" data-group-id="1033112095-7">}</span></code></pre><h3 id="map-struct-keys" class="section-heading">
+</span><span class="p" data-group-id="5582740937-7">%</span><span class="nc" data-group-id="5582740937-7">AStruct</span><span class="p" data-group-id="5582740937-7">{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p" data-group-id="5582740937-7">}</span></code></pre><h3 id="map-struct-keys" class="section-heading">
   <a href="#map-struct-keys" class="hover-link">
     <i class="ri-link-m" aria-hidden="true"></i>
   </a>
   <span class="text">map / struct keys</span>
 </h3>
 <p><code class="inline">map / struct binary() keys -&gt; existing atom()</code></p><p>Example:</p><pre><code class="makeup elixir" translate="no"><span class="w">
-</span><span class="na">@type</span><span class="w"> </span><span class="n">a_map</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p" data-group-id="6042773072-1">%{</span><span class="w">
+</span><span class="na">@type</span><span class="w"> </span><span class="n">a_map</span><span class="w"> </span><span class="o">::</span><span class="w"> </span><span class="p" data-group-id="2698522416-1">%{</span><span class="w">
         </span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="n">binary</span><span class="p">,</span><span class="w">
         </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="n">binary</span><span class="w">
-      </span><span class="p" data-group-id="6042773072-1">}</span><span class="w">
+      </span><span class="p" data-group-id="2698522416-1">}</span><span class="w">
 
 </span><span class="c1"># ---</span><span class="w">
-</span><span class="p" data-group-id="6042773072-2">%{</span><span class="s">&quot;a&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p" data-group-id="6042773072-2">}</span><span class="w">
+</span><span class="p" data-group-id="2698522416-2">%{</span><span class="s">&quot;a&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p" data-group-id="2698522416-2">}</span><span class="w">
 </span><span class="c1"># to</span><span class="w">
-</span><span class="p" data-group-id="6042773072-3">%{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p" data-group-id="6042773072-3">}</span></code></pre><h3 id="atom" class="section-heading">
+</span><span class="p" data-group-id="2698522416-3">%{</span><span class="ss">a</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">b</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p" data-group-id="2698522416-3">}</span></code></pre><h3 id="atom" class="section-heading">
   <a href="#atom" class="hover-link">
     <i class="ri-link-m" aria-hidden="true"></i>
   </a>
@@ -381,26 +376,28 @@ with the type parameters.</p><p>For example, let's say we have:</p><pre><code cl
   </a>
   <span class="text">Plug</span>
 </h2>
-<p><a href="DataSpecs.Plug.Cast.html"><code class="inline">DataSpecs.Plug.Cast</code></a> provides a plug to &quot;Jason.decode! -&gt; DataSpecs.cast&quot; in your routes:</p><pre><code class="makeup elixir" translate="no"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">Api.Router.Something</span><span class="w"> </span><span class="k" data-group-id="1145504652-1">do</span><span class="w">
+<p><a href="DataSpecs.Plug.Cast.html"><code class="inline">DataSpecs.Plug.Cast</code></a> provides a plug to &quot;Jason.decode! -&gt; DataSpecs.cast&quot; in your routes:</p><pre><code class="makeup elixir" translate="no"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">Api.Router.Something</span><span class="w"> </span><span class="k" data-group-id="1050800671-1">do</span><span class="w">
   </span><span class="kn">use</span><span class="w"> </span><span class="nc">Plug.Router</span><span class="w">
-  </span><span class="kn">import</span><span class="w"> </span><span class="nc">DataSpecs.Plug.Cast</span><span class="p">,</span><span class="w"> </span><span class="ss">only</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="1145504652-2">[</span><span class="ss">typeref</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">value</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="1145504652-2">]</span><span class="w">
+  </span><span class="kn">import</span><span class="w"> </span><span class="nc">DataSpecs.Plug.Cast</span><span class="p">,</span><span class="w"> </span><span class="ss">only</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="1050800671-2">[</span><span class="ss">typeref</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">value</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="1050800671-2">]</span><span class="w">
 
   </span><span class="n">plug</span><span class="w"> </span><span class="ss">:match</span><span class="w">
   </span><span class="n">plug</span><span class="w"> </span><span class="nc">DataSpecs.Plug.Cast</span><span class="w">
   </span><span class="n">plug</span><span class="w"> </span><span class="ss">:dispatch</span><span class="w">
 
-  </span><span class="n">post</span><span class="w"> </span><span class="s">&quot;/foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">typeref</span><span class="p" data-group-id="1145504652-3">(</span><span class="nc">Api.Model.Foo</span><span class="p">,</span><span class="w"> </span><span class="ss">:t</span><span class="p" data-group-id="1145504652-3">)</span><span class="w"> </span><span class="k" data-group-id="1145504652-4">do</span><span class="w">
-    </span><span class="p" data-group-id="1145504652-5">%</span><span class="nc" data-group-id="1145504652-5">Api.Model.Foo</span><span class="p" data-group-id="1145504652-5">{</span><span class="n">...</span><span class="p" data-group-id="1145504652-5">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p" data-group-id="1145504652-6">(</span><span class="n">conn</span><span class="p" data-group-id="1145504652-6">)</span><span class="w">
+  </span><span class="n">post</span><span class="w"> </span><span class="s">&quot;/foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">typeref</span><span class="p" data-group-id="1050800671-3">(</span><span class="nc">Api.Model.Foo</span><span class="p">,</span><span class="w"> </span><span class="ss">:t</span><span class="p" data-group-id="1050800671-3">)</span><span class="w"> </span><span class="k" data-group-id="1050800671-4">do</span><span class="w">
+    </span><span class="p" data-group-id="1050800671-5">%</span><span class="nc" data-group-id="1050800671-5">Api.Model.Foo</span><span class="p" data-group-id="1050800671-5">{</span><span class="n">...</span><span class="p" data-group-id="1050800671-5">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p" data-group-id="1050800671-6">(</span><span class="n">conn</span><span class="p" data-group-id="1050800671-6">)</span><span class="w">
     </span><span class="n">...</span><span class="w">
-  </span><span class="k" data-group-id="1145504652-4">end</span><span class="w">
-</span><span class="k" data-group-id="1145504652-1">end</span></code></pre><h2 id="ecto-embedded-schema-validation-comparison" class="section-heading">
+  </span><span class="k" data-group-id="1050800671-4">end</span><span class="w">
+</span><span class="k" data-group-id="1050800671-1">end</span></code></pre><h2 id="ecto-embedded-schema-validation-comparison" class="section-heading">
   <a href="#ecto-embedded-schema-validation-comparison" class="hover-link">
     <i class="ri-link-m" aria-hidden="true"></i>
   </a>
   <span class="text">Ecto embedded schema validation comparison</span>
 </h2>
 <p><a href="https://github.com/visciang/example_validation">https://github.com/visciang/example_validation</a></p>
-<div class="bottom-actions">
+</div>
+
+<div class="bottom-actions" id="bottom-actions">
   <div class="bottom-actions-item">
 
       <a href="api-reference.html" class="bottom-actions-button" rel="prev">
@@ -417,30 +414,29 @@ API Reference
 
   </div>
 </div>
-      <footer class="footer">
-        <p>
+    <footer class="footer">
+      <p>
 
-          <span class="line">
-            <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
-              Search HexDocs
-            </button>
+        <span class="line">
+          <button class="a-main footer-button display-quick-switch" title="Search HexDocs packages">
+            Search HexDocs
+          </button>
 
-          </span>
-        </p>
+        </span>
+      </p>
 
-        <p class="built-using">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.31.1) for the
+      <p class="built-using">
+        Built using
+        <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.34.2) for the
 
-            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+          <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 
-        </p>
-      </footer>
-    </div>
+      </p>
+
+    </footer>
   </div>
 </main>
 </div>
-
 
   </body>
 </html>
